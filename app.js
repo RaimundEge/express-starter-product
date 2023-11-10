@@ -1,4 +1,5 @@
 const express = require('express')
+var db = require('./controllers/database.js')
 
 const app = express()
 var port = process.env.PORT || 3000;
