@@ -17,6 +17,18 @@ app.get('/getParts', (req, res) => {
   });
 })
 
+app.get('/warehouseHomepage', (req, res) => {
+  res.render('warehouseHomepage.ejs');
+})
+
+app.post('/workstation', (req, res) => {
+  res.render('workstation.ejs');
+})
+
+app.post('/receivingDesk', (req, res) => {
+  res.render('receivingDesk.ejs');
+})
+
 const credit = require('./controllers/credit');
 app.get('/processCC', (req, res) => {
   credit.processSample((result) => {
